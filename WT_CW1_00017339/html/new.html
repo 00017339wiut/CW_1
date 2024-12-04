@@ -112,28 +112,35 @@
       </div>
 </div>
   
+ <script> 
+   // Animation of timeline when they appear on screen
+   function animateTimeline() {
+     const containers = document.querySelectorAll('.container');
+     containers.forEach(container => {
+       const rect = container.getBoundingClientRect();
+       if (rect.top < window.innerHeight && rect.bottom >= 0) {
+         container.style.opacity = 1;
+         container.style.transform = 'translateY(0)';
+       }
+     });
+   }
 
-  <script> 
+   // Scroll event listener to trigger the animation
+   window.addEventListener('scroll', animateTimeline);
+   
+   // Initial animation when the page loads
+   window.addEventListener('load', animateTimeline);
 
-   //  Animation of timeline when they appear on screen
-    function animateTimeline() {
-      const containers = document.querySelectorAll('.container');
-      containers.forEach(container => {
-        const rect = container.getBoundingClientRect();
-        if (rect.top < window.innerHeight && rect.bottom >= 0) {
-          container.style.opacity = 1;
-          container.style.transform = 'translateY(0)';
-        }
-      });
-    }
-    
-    // Scroll event listener to trigger the animation
-    window.addEventListener('scroll', animateTimeline);
-    
-    // Initial animation when the page loads
-    window.addEventListener('load', animateTimeline);
-    }
- </script>
+ // Function to toggle the content visibility on click (expand/collapse)
+   function toggleContent(event) {
+     const content = event.querySelector('.content');
+     if (content.style.maxHeight) {
+       content.style.maxHeight = null; 
+     } else {
+       content.style.maxHeight = content.scrollHeight + 'px'; 
+     }
+   }
+</script>
 
     <!-- footer -->
     <footer>
