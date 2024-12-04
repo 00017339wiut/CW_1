@@ -11,4 +11,4 @@ The news section has a timeline of several events that were taken from the unive
 Finally the contact us page has a form that user needs to fill out to send their contact information to receive a call, after the form is filled and submitted there is a custom modal 
 that pops up on the screen  confirming the submission of the form (disclaimer, the information used to fill out the form is not stored anywhere or received by anyone or anything).
 
-
+link to the website:  https://wiut-web-tech-cw.netlify.app/
