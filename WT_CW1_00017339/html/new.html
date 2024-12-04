@@ -14,7 +14,7 @@
         <nav class="navbar">
            
             <div class="logo">
-               <img src="../images/logo.png" alt="" width="">
+               <img src="../images/logo.png" alt="" >
             </div>
        
             <div class="menu-icon" onclick="toggleMenu()">
@@ -132,15 +132,6 @@
     
     // Initial animation when the page loads
     window.addEventListener('load', animateTimeline);
-    
-    // Function to toggle the content visibility on click (expand/collapse)
-    function toggleContent(event) {
-      const content = event.querySelector('.content');
-      if (content.style.maxHeight) {
-        content.style.maxHeight = null; 
-      } else {
-        content.style.maxHeight = content.scrollHeight + 'px'; 
-      }
     }
  </script>
 
